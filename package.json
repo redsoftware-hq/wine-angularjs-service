@@ -2,13 +2,9 @@
   "name": "wine-angularjs-service",
   "version": "0.0.1",
   "description": "An AngularJS service wrapper for REST API calls",
-  "keywords": [
-    "angularjs"
-  ],
+  "keywords": ["angularjs"],
   "bugs": "https://github.com/redsoftware-hq/wine-angularjs-service/issues",
-  "files": [
-    "dist/**/*"
-  ],
+  "files": ["dist/**/*"],
   "repository": "https://github.com/redsoftware-hq/wine-angularjs-service",
   "author": "Ronak Baldha <ronak.baldha@gmail.com> (http://r.onak.in)",
   "license": "MIT",
@@ -27,7 +23,8 @@
   },
   "dependencies": {
     "angular": "^1.6.5",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "angular-ui-notification": "^0.3.5"
   },
   "scripts": {
     "start": "yarn run dev",

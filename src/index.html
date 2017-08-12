@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="wnHttp">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wine AngularJS Service</title>
+  <link href="../node_modules/angular-ui-notification/dist/angular-ui-notification.css" rel="stylesheet" />
 </head>
 
-<body>
+<body ng-controller="mainController as vm">
   <script src="../node_modules/angular/angular.js"></script>
   <script src="../node_modules/underscore/underscore.js"></script>
-  <script src="app.js"></script>
-
+  <script src="../node_modules/angular-ui-notification/dist/angular-ui-notification.js"></script>
   <!-- build:js wine-service.min.js -->
   <!-- Components -->
-  <script src="components/ic-components/ic-components.js"></script>
-  <script src="components/ic-table/ic-table.js"></script>
-  <script src="components/ic-panel/ic-panel.js"></script>
+  <script src="app.js"></script>
+  <script src="app.provider.js"></script>
   <!-- endbuild -->
+  <script src="main.controller.js"></script>
+
+  API Base Url: {{vm.apiBaseUrl}} <br/> Exception Type: {{vm.exceptionType}}
 </body>
 
 </html>
