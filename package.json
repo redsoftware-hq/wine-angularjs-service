@@ -1,6 +1,6 @@
 {
   "name": "wine-angularjs-service",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "An AngularJS service wrapper for REST API calls",
   "keywords": ["angularjs"],
   "bugs": "https://github.com/redsoftware-hq/wine-angularjs-service/issues",
@@ -29,6 +29,7 @@
   "scripts": {
     "start": "yarn run dev",
     "build": "node_modules/.bin/grunt build",
-    "dev": "node_modules/.bin/grunt dev"
+    "dev": "node_modules/.bin/grunt dev",
+    "prepublishOnly": "yarn run build"
   }
 }
