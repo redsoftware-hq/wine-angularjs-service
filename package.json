@@ -1,6 +1,6 @@
 {
   "name": "wine-angularjs-service",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An AngularJS service wrapper for REST API calls",
   "keywords": ["angularjs"],
   "bugs": "https://github.com/redsoftware-hq/wine-angularjs-service/issues",

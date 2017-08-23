@@ -147,13 +147,22 @@
             return deferred.promise;
           };
 
-          instance.search = function(key, includeFields) {
+          instance.search = function(key, includeFields, queryParamsObject) {
             var deferred = $q.defer();
             var includeString = "";
 
             includeFields.forEach(function(field) {
               includeString += "&include=" + field;
             });
+
+            console.log(
+              instance.apiBaseUrl +
+                instance.apiController +
+                "/Search?query=" +
+                key +
+                includeString +
+                instance.getQueryString(queryParamsObject, true)
+            );
 
             $http({
               method: "GET",
@@ -162,7 +171,8 @@
                 instance.apiController +
                 "/Search?query=" +
                 key +
-                includeString,
+                includeString +
+                instance.getQueryString(queryParamsObject, true),
               dataType: "JSON"
             }).then(
               function(success) {
@@ -177,14 +187,18 @@
             return deferred.promise;
           };
 
-          instance.getQueryString = function(queryParamsObject) {
+          instance.getQueryString = function(queryParamsObject, trailing) {
             var queryParamsString;
 
             _.each(_.keys(queryParamsObject), function(key) {
               if (queryParamsString) {
                 queryParamsString += "&" + key + "=" + queryParamsObject[key];
               } else {
-                queryParamsString = "?" + key + "=" + queryParamsObject[key];
+                if (trailing) {
+                  queryParamsString = "&" + key + "=" + queryParamsObject[key];
+                } else {
+                  queryParamsString = "?" + key + "=" + queryParamsObject[key];
+                }
               }
             });
 
