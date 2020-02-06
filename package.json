@@ -2,29 +2,27 @@
   "name": "wine-angularjs-service",
   "version": "0.0.6",
   "description": "An AngularJS service wrapper for REST API calls",
-  "keywords": ["angularjs"],
-  "bugs": "https://github.com/redsoftware-hq/wine-angularjs-service/issues",
-  "files": ["dist/**/*"],
-  "repository": "https://github.com/redsoftware-hq/wine-angularjs-service",
-  "author": "Ronak Baldha <ronak.baldha@gmail.com> (http://r.onak.in)",
+  "files": [
+    "dist/**/*"
+  ],
   "license": "MIT",
   "devDependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^2.2.0",
-    "grunt-contrib-uglify": "^3.0.1",
-    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-filerev": "^2.3.1",
-    "grunt-html2js": "^0.3.8",
+    "grunt-html2js": "^0.7.1",
     "grunt-usemin": "^3.1.1"
   },
   "dependencies": {
-    "angular": "^1.6.5",
-    "underscore": "^1.8.3",
-    "angular-ui-notification": "^0.3.5"
+    "angular": "^1.7.9",
+    "underscore": "^1.9.2",
+    "angular-ui-notification": "^0.3.6"
   },
   "scripts": {
     "start": "yarn run dev",
